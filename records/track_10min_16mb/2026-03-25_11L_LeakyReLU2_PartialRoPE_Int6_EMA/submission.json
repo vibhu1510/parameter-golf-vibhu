@@ -1,0 +1,9 @@
+{
+  "name": "11L LeakyReLU² + Partial RoPE + Int6 + EMA",
+  "val_bpb": 1.1200,
+  "bytes_total": 15900000,
+  "blurb": "LeakyReLU(0.5)² activation applied to the PR #414 base (11L, 512d, 8H/4KV, 3x MLP). Key techniques: partial RoPE (16/64 dims), LN scale 1/sqrt(layer+1), BigramHash(2048), Value Embedding on layers 9-10, XSA on last 4 layers, EMA averaging (decay=0.997), late QAT at scale<0.15, int6 GPTQ-lite quantization + zstd compression, sliding window eval (stride=64), warmdown 3500 steps. LeakyReLU provides -0.003 BPB over relu² by preserving negative gradient flow.",
+  "author": "vibhu1510",
+  "github_id": "vibhu1510",
+  "date": "2026-03-25"
+}
